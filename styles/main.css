@@ -1,12 +1,13 @@
 :root{
     --primary: #393b44;
-    --secondary: #ad9d9d;
+    --secondary: #dfdfdf;
     --text: hsl(56, 100%, 67%);
     --text-light: #d8f8ae;
     --text-dark: #583d72;
 }
 body{
     font-family: 'Times New Roman', Courier, monospace;
+    background-color: var(--secondary);
 }
 *{
     box-sizing: border-box;
@@ -14,11 +15,12 @@ body{
     padding: 0;
 }
 header{
-    padding: 1rem 0;
+    padding: 1rem 0 1.5rem 0;
     margin-bottom: 3rem;
     text-align: center;
     background-color: var(--primary);
     color: var(--text);
+    border-radius: 0 0 20% 20%;
 }
 header p{
     margin-top:0.6rem;
@@ -34,9 +36,8 @@ section{
 }
 footer{
     background-color: var(--primary);
-    position: fixed;
-    bottom: 0;
     padding: 2rem;
+    border-radius: 10% 10% 0 0;
 }
 footer div{
     max-width:80%;
@@ -57,6 +58,8 @@ footer h4{
 }
 .input textarea{
     width: 100%;
+    outline: none;
+    font-size: 1.2rem;
 }
 textarea::placeholder{
     font-size: 1rem;
@@ -72,4 +75,16 @@ textarea::placeholder{
     background-color: #fceb07;
     cursor: pointer;
     padding: 1.02rem 2.02rem;
+}
+.output div{
+    border: 1px solid var(--primary);
+    background-color: white;
+    overflow: scroll;
+    height: 30vh;
+    margin-top:0.4rem;
+}
+.output p{
+    color: var(--primary);
+    font-style: italic;
+    margin-top: 1rem;
 }
